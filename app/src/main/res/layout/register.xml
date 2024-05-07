@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+    tools:context=".Activities.Register">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="84dp"
+        android:text="K. Adı :" />
+
+    <EditText
+        android:id="@+id/txtRUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="40dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRUsername"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="78dp"
+        android:text="Parola :" />
+
+    <EditText
+        android:id="@+id/txtRPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRUsername"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="48dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:ems="10"
+        android:inputType="text|textPassword" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRPassword"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="63dp"
+        android:text="Par. Tek. :" />
+
+    <EditText
+        android:id="@+id/txtRPassRep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="48dp"
+        android:layout_toEndOf="@+id/textView5"
+        android:ems="10"
+        android:inputType="text|textPassword" />
+
+    <Button
+        android:id="@+id/btnRDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRPassRep"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:text="GG.AA.YYYY" />
+
+    <Button
+        android:id="@+id/btnRRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:text="Kayıt Ol" />
+
+</RelativeLayout>

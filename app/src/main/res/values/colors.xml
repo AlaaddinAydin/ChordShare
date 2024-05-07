@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="musicItemTextColour">#000000</color>
+    <color name="musicItemBgColour">#5A5A5A</color>
+</resources>
