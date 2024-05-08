@@ -17,10 +17,11 @@ import java.util.ArrayList;
 
 public class MusicAdapter  extends RecyclerView.Adapter<MusicAdapter.MusicHolder> {
 
+
     private ArrayList<Music> musicList;
 
     private Context context;
-
+    private int selectedPosition = RecyclerView.NO_POSITION;
     private OnItemClickListener listener;
 
     public MusicAdapter(ArrayList<Music> musicList, Context context) {
@@ -41,6 +42,24 @@ public class MusicAdapter  extends RecyclerView.Adapter<MusicAdapter.MusicHolder
     public void onBindViewHolder(@NonNull MusicHolder holder, int position) {
         Music music = musicList.get(position);
         holder.setData(music);
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int clickedPosition = holder.getAdapterPosition(); // Tıklanan pozisyonu al
+                if (listener != null && clickedPosition != RecyclerView.NO_POSITION) {
+                    listener.onItemClick(musicList.get(clickedPosition), clickedPosition);
+                    //selectedPosition = clickedPosition; // Seçilen pozisyonu güncelle
+                }
+            }
+        });
+
+        if (position == selectedPosition) {
+            // Seçili öğenin arka planını veya başka bir özelliğini değiştirme
+        } else {
+            // Diğer öğelerin arka planını veya başka bir özelliğini değiştirme
+        }
     }
 
     @Override
@@ -69,7 +88,7 @@ public class MusicAdapter  extends RecyclerView.Adapter<MusicAdapter.MusicHolder
 
                     if(listener != null && position != RecyclerView.NO_POSITION)
                     {
-                        listener.onItemClick(musicList.get(position));
+                        listener.onItemClick(musicList.get(position) , position);
                     }
                 }
             });
@@ -86,8 +105,17 @@ public class MusicAdapter  extends RecyclerView.Adapter<MusicAdapter.MusicHolder
         }
     }
 
-    public interface OnItemClickListener{
-        void onItemClick(Music music);
+    public void removeItem(int position){
+        if (position >= 0 && position < musicList.size()) {
+            musicList.remove(position);
+            notifyItemRemoved(position);
+            notifyItemRangeChanged(position, musicList.size()); // Dizinlerin güncellenmesi
+
+        }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(Music music, int position);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener)
