@@ -141,6 +141,7 @@
             </LinearLayout>
 
             <Button
+                style="@style/OwnButtonTheme"
                 android:id="@+id/delete_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

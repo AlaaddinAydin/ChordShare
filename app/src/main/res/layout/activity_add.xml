@@ -34,6 +34,7 @@
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="50dp"
+                style="@style/OwnTextTheme"
                 android:hint="Parçanın ismini giriniz"
                 android:textAlignment="center">
             </EditText>
@@ -44,6 +45,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:hint="Grubu giriniz"
+                style="@style/OwnTextTheme"
                 android:textAlignment="center">
             </EditText>
 
@@ -53,6 +55,7 @@
                 android:inputType="textMultiLine"
                 android:layout_height="100dp"
                 android:layout_marginTop="15dp"
+                style="@style/OwnTextTheme"
                 android:hint="Şarkı sözlerini giriniz"
                 android:textAlignment="center">
             </EditText>
@@ -70,7 +73,8 @@
             </ImageView>
 
             <Button
-                android:layout_width="230dp"
+                style="@style/OwnButtonTheme"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="25dp"
                 android:text="Kaydet"
@@ -78,7 +82,6 @@
                 android:textStyle="bold"
                 android:id="@+id/add_activity_btnSave"
                 android:enabled="true"
-                android:textColor="#000000"
                 android:textAllCaps="false"
                 android:onClick="MusicSave">
             </Button>
