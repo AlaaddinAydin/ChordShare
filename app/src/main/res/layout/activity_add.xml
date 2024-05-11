@@ -60,6 +60,17 @@
                 android:textAlignment="center">
             </EditText>
 
+
+            <EditText
+                android:id="@+id/add_activity_editTextMusicLink"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                style="@style/OwnTextTheme"
+                android:hint="Parçanın linkini giriniz."
+                android:textAlignment="center">
+            </EditText>
+
             <ImageView
                 android:id="@+id/add_activity_imageViewMusicChord"
                 android:layout_width="240dp"

@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -34,10 +35,11 @@ import java.io.IOException;
 public class AddActivity extends AppCompatActivity {
 
 
-    private EditText editTextMusicName , editTextMusicGrup, editTextMusicLyrics;
+    private EditText editTextMusicName , editTextMusicGrup, editTextMusicLyrics, editTextMusicLink;
     private ImageView imageViewMusicChord , imageViewMusicImage;
-    private String musicName, musicGroup, musiclyrics;
-    //private Button btnSave;
+    private String musicName, musicGroup, musiclyrics , musicLink;
+    public String linkId;
+    private Button btnSave;
 
     private boolean isMainImg;
 
@@ -54,10 +56,12 @@ public class AddActivity extends AppCompatActivity {
         editTextMusicName = (EditText) findViewById(R.id.add_activity_editTextMusicName);
         editTextMusicLyrics = (EditText) findViewById(R.id.add_activity_editTextMusicLyrics);
 
+        editTextMusicLink = (EditText) findViewById(R.id.add_activity_editTextMusicLink);
+
         imageViewMusicChord = (ImageView) findViewById(R.id.add_activity_imageViewMusicChord);
         imageViewMusicImage = (ImageView) findViewById(R.id.add_activity_imageViewMusicImage);
 
-        //btnSave = (Button) findViewById(R.id.add_activity_btnSave);
+        btnSave = (Button) findViewById(R.id.add_activity_btnSave);
 
     }
     @Override
@@ -105,6 +109,13 @@ public class AddActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MusicSave(v);
+            }
+        });
     }
 
 
@@ -115,7 +126,10 @@ public class AddActivity extends AppCompatActivity {
         musicGroup = editTextMusicGrup.getText().toString();
         musiclyrics = editTextMusicLyrics.getText().toString();
 
-        if(!TextUtils.isEmpty(musicName) && !TextUtils.isEmpty(musicGroup) && !TextUtils.isEmpty(musiclyrics))
+
+        musicLink = getLinkId(editTextMusicLink.getText().toString());
+
+        if(!TextUtils.isEmpty(musicName) && !TextUtils.isEmpty(musicGroup) && !TextUtils.isEmpty(musiclyrics) && !TextUtils.isEmpty(musicLink))
         {
             // Kaydediliyor
 
@@ -141,9 +155,9 @@ public class AddActivity extends AppCompatActivity {
 
                 try {
                     SQLiteDatabase database = this.openOrCreateDatabase("Musics",MODE_PRIVATE,null);
-                    database.execSQL("CREATE TABLE IF NOT EXISTS musics (id INTEGER PRIMARY KEY , musicName VARCHAR, musicGroup VARCHAR, musicLyrics VARCHAR , musicImage BLOB, musicChord BLOB)");
+                    database.execSQL("CREATE TABLE IF NOT EXISTS musics (id INTEGER PRIMARY KEY , musicName VARCHAR, musicGroup VARCHAR, musicLyrics VARCHAR , musicImage BLOB, musicChord BLOB, musicLink VARCHAR)");
 
-                    String sqlQuery = "INSERT INTO musics (musicName , musicGroup, musicLyrics , musicImage , musicChord) VALUES (?, ?, ?, ?, ?)";
+                    String sqlQuery = "INSERT INTO musics (musicName , musicGroup, musicLyrics , musicImage , musicChord, musicLink) VALUES (?, ?, ?, ?, ?, ?)";
                     SQLiteStatement statement = database.compileStatement(sqlQuery);
 
                     statement.bindString(1 , musicName);
@@ -151,6 +165,7 @@ public class AddActivity extends AppCompatActivity {
                     statement.bindString(3 , musiclyrics);
                     statement.bindBlob(4 , musicImageToSave);
                     statement.bindBlob(5 , musicChordToSave);
+                    statement.bindString(6,musicLink);
 
                     statement.execute();
 
@@ -176,6 +191,25 @@ public class AddActivity extends AppCompatActivity {
         }
         else {
             showToast("Boşlukları doldurduğunuzdan ve resim yüklediğinizden emin olun");
+        }
+    }
+
+    public String getLinkId(String string) {
+        int index = -1;
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i) == '=') {
+                index = i;
+                break;
+            }
+        }
+
+        if (index != -1) { // "=" sembolü bulunduysa
+            // İkinci parçayı alma
+            linkId =  string.substring(index + 1);
+            return linkId;
+        } else {
+            showToast("Link'i doğru kopyaladığınızdan emin olun");
+            return ""; // veya başka bir değer döndürülebilir
         }
     }
 
@@ -206,6 +240,7 @@ public class AddActivity extends AppCompatActivity {
         editTextMusicGrup.setText("");
         editTextMusicName.setText("");
         editTextMusicLyrics.setText("");
+        editTextMusicLink.setText("");
         imageViewMusicChord.setImageResource(R.drawable.ic_image_search);
         imageViewMusicImage.setImageResource(R.drawable.ic_image_search);
     }
@@ -245,4 +280,6 @@ public class AddActivity extends AppCompatActivity {
         finish();
         startActivity(backIntent);
     }
+
+
 }

@@ -10,20 +10,19 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 public class Music {
-    private String musicName , musicGroup , musicLyrics;
+    private String musicName , musicGroup , musicLyrics, musicLink;
 
     private Bitmap musicImage, musicChord;
 
 
-    public Music(){
-
+    public Music() {
     }
 
-
-    public Music(String musicName, String musicGroup, String musicLyrics, Bitmap musicImage, Bitmap musicChord) {
+    public Music(String musicName, String musicGroup, String musicLyrics, String musicLink, Bitmap musicImage, Bitmap musicChord) {
         this.musicName = musicName;
         this.musicGroup = musicGroup;
         this.musicLyrics = musicLyrics;
+        this.musicLink = musicLink;
         this.musicImage = musicImage;
         this.musicChord = musicChord;
     }
@@ -52,6 +51,14 @@ public class Music {
         this.musicLyrics = musicLyrics;
     }
 
+    public String getMusicLink() {
+        return musicLink;
+    }
+
+    public void setMusicLink(String musicLink) {
+        this.musicLink = musicLink;
+    }
+
     public Bitmap getMusicImage() {
         return musicImage;
     }
@@ -75,6 +82,7 @@ public class Music {
         ArrayList<String> musicNameList = new ArrayList<>();
         ArrayList<String> musicGroupList = new ArrayList<>();
         ArrayList<String> musicLyricsList = new ArrayList<>();
+        ArrayList<String> musicLinkList = new ArrayList<>();
 
 
         ArrayList<Bitmap> musicImageList = new ArrayList<>();
@@ -92,6 +100,7 @@ public class Music {
             int musicLyricsIndex = cursor.getColumnIndex("musicLyrics");
             int musicImageIndex = cursor.getColumnIndex("musicImage");
             int musicChordIndex = cursor.getColumnIndex("musicChord");
+            int musicLinkIndex = cursor.getColumnIndex("musicLink");
 
             while (cursor.moveToNext()){
 
@@ -108,6 +117,7 @@ public class Music {
 
                 musicImageList.add(bitmapMusicImage);
                 musicChordList.add(bitmapMusicChord);
+                musicLinkList.add(cursor.getString(musicLinkIndex));
             }
 
             cursor.close();
@@ -123,6 +133,8 @@ public class Music {
 
                 music.setMusicImage(musicImageList.get(i));
                 music.setMusicChord(musicChordList.get(i));
+
+                music.setMusicLink(musicLinkList.get(i));
 
 
                 musicList.add(music);

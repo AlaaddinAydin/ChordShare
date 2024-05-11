@@ -43,7 +43,7 @@ public class Home extends AppCompatActivity {
         adapter.setOnItemClickListener(new MusicAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Music music, int position) {
-                musicDetail = new MusicDetail(music.getMusicName(),music.getMusicGroup(),music.getMusicLyrics(),music.getMusicImage(),music.getMusicChord());
+                musicDetail = new MusicDetail(music.getMusicName(),music.getMusicGroup(),music.getMusicLyrics(), music.getMusicLink(),music.getMusicImage(),music.getMusicChord());
 
                 Intent detailIntent = new Intent(Home.this, Detail.class);
                 detailIntent.putExtra("position", position);

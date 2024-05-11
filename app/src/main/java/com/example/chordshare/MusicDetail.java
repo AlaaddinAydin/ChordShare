@@ -4,14 +4,15 @@ import android.graphics.Bitmap;
 
 public class MusicDetail {
 
-    private String musicName , musciGroup, musicLyrics;
+    private String musicName , musciGroup, musicLyrics, musicLink;
 
     private Bitmap musicImage , musicChord;
 
-    public MusicDetail(String musicName, String musciGroup, String musicLyrics, Bitmap musicImage, Bitmap musicChord) {
+    public MusicDetail(String musicName, String musciGroup, String musicLyrics, String musicLink, Bitmap musicImage, Bitmap musicChord) {
         this.musicName = musicName;
         this.musciGroup = musciGroup;
         this.musicLyrics = musicLyrics;
+        this.musicLink = musicLink;
         this.musicImage = musicImage;
         this.musicChord = musicChord;
     }
@@ -26,6 +27,10 @@ public class MusicDetail {
 
     public String getMusicLyrics() {
         return musicLyrics;
+    }
+
+    public String getMusicLink() {
+        return musicLink;
     }
 
     public Bitmap getMusicImage() {

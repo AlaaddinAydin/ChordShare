@@ -1,5 +1,6 @@
 package com.example.chordshare.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -16,13 +18,19 @@ import android.widget.Toast;
 import com.example.chordshare.Adapters.MusicAdapter;
 import com.example.chordshare.Music;
 import com.example.chordshare.R;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 public class Detail extends AppCompatActivity {
 
     private ImageView musicImage , musicChord ;
 
     private TextView txtMusicName , txtGroupName, txtMusicLyrics;
-    private String musicName,groupName,musicLyrics;
+    private String musicName,groupName,musicLyrics, musicLink;
+
+    private static final String TAG = "MainActivity";
+    private static final String NEW_VIDEO_ID = Home.musicDetail.getMusicLink();
 
     private int position;
 
@@ -40,6 +48,7 @@ public class Detail extends AppCompatActivity {
 
         deleteButton = (Button) findViewById(R.id.delete_button);
 
+
         musicName = Home.musicDetail.getMusicName();
         groupName = Home.musicDetail.getMusciGroup();
         musicLyrics = Home.musicDetail.getMusicLyrics();
@@ -47,6 +56,7 @@ public class Detail extends AppCompatActivity {
 
         tMusicImage = Home.musicDetail.getMusicImage();
         tMusicChord = Home.musicDetail.getMusicChord();
+
     }
 
     @Override
@@ -57,14 +67,19 @@ public class Detail extends AppCompatActivity {
         init();
 
 
-        if(!TextUtils.isEmpty(musicName) && !TextUtils.isEmpty(groupName) && !TextUtils.isEmpty(musicLyrics))
-        {
+        YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
+
+        if (!TextUtils.isEmpty(musicName) && !TextUtils.isEmpty(groupName) && !TextUtils.isEmpty(musicLyrics)) {
             txtMusicName.setText(musicName);
             txtGroupName.setText(groupName);
             txtMusicLyrics.setText(musicLyrics);
 
             musicImage.setImageBitmap(tMusicImage);
             musicChord.setImageBitmap(tMusicChord);
+
+
+            getLifecycle().addObserver(youTubePlayerView);
+
         }
 
         position = getIntent().getIntExtra("position", -1); // Pozisyonu al
@@ -76,6 +91,19 @@ public class Detail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 deleteMusic();
+            }
+        });
+
+        youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+            @Override
+            public void onReady(YouTubePlayer youTubePlayer) {
+                super.onReady(youTubePlayer);
+                Log.d(TAG, "YouTube player hazır.");
+
+                // Yeni videoyu yükle
+                youTubePlayer.loadVideo(NEW_VIDEO_ID, 0);
+
+
             }
         });
 
