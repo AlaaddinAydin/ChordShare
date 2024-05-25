@@ -43,10 +43,11 @@ public class Home extends AppCompatActivity {
         adapter.setOnItemClickListener(new MusicAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Music music, int position) {
-                musicDetail = new MusicDetail(music.getMusicName(),music.getMusicGroup(),music.getMusicLyrics(), music.getMusicLink(),music.getMusicImage(),music.getMusicChord());
+                musicDetail = new MusicDetail(music.getMusicName(), music.getMusicGroup(), music.getMusicLyrics(), music.getMusicLink(), music.getMusicImage(), music.getMusicChord());
 
                 Intent detailIntent = new Intent(Home.this, Detail.class);
                 detailIntent.putExtra("position", position);
+                detailIntent.putExtra("musicLink", music.getMusicLink());
                 startActivity(detailIntent);
             }
         });
@@ -82,6 +83,12 @@ public class Home extends AppCompatActivity {
         if (item.getItemId() == R.id.menu)
         {
             Intent aboutUsIntent = new Intent(this, About.class);
+            startActivity(aboutUsIntent);
+        }
+
+        if (item.getItemId() == R.id.tunner)
+        {
+            Intent aboutUsIntent = new Intent(this, Tuner.class);
             startActivity(aboutUsIntent);
         }
         return super.onOptionsItemSelected(item);

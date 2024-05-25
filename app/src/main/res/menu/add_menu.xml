@@ -12,4 +12,9 @@
         android:icon="@drawable/ic_menu"
         android:title="About us"/>
 
+    <item
+        android:id="@+id/tunner"
+        android:icon="@drawable/ic_menu"
+        android:title="Akort cihazı"/>
+
 </menu>

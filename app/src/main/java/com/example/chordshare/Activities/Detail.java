@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.chordshare.Adapters.MusicAdapter;
 import com.example.chordshare.Music;
 import com.example.chordshare.R;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
@@ -29,8 +30,8 @@ public class Detail extends AppCompatActivity {
     private TextView txtMusicName , txtGroupName, txtMusicLyrics;
     private String musicName,groupName,musicLyrics, musicLink;
 
-    private static final String TAG = "MainActivity";
-    private static final String NEW_VIDEO_ID = Home.musicDetail.getMusicLink();
+    private String TAG = "MainActivity";
+    private String NEW_VIDEO_ID = Home.musicDetail.getMusicLink();
 
     private int position;
 
@@ -104,6 +105,11 @@ public class Detail extends AppCompatActivity {
                 youTubePlayer.loadVideo(NEW_VIDEO_ID, 0);
 
 
+            }
+
+            @Override
+            public void onError(@NonNull YouTubePlayer youTubePlayer, @NonNull PlayerConstants.PlayerError error) {
+                youTubePlayer.loadVideo(NEW_VIDEO_ID, 0);
             }
         });
 

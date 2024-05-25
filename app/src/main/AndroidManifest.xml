@@ -18,7 +18,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChordShare"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Activities.Education"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Metronome"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Buttons"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Tuner"
+            android:exported="false" />
         <activity
             android:name=".About"
             android:exported="false" />

@@ -69,7 +69,7 @@ public class Login extends AppCompatActivity {
                                 // Go to Main
                                 v.vibrate(1000);
 
-                                Intent home = new Intent(Login.this , Home.class);
+                                Intent home = new Intent(Login.this , Buttons.class);
                                 startActivity(home);
                             } else {
                                 // Şifre yanlış
