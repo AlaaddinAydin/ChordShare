@@ -19,10 +19,13 @@
         android:theme="@style/Theme.ChordShare"
         tools:targetApi="31">
         <activity
-            android:name=".Activities.Education"
+            android:name=".Activities.Metronome"
             android:exported="false" />
         <activity
-            android:name=".Activities.Metronome"
+            android:name=".Activities.Settings"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Education"
             android:exported="false" />
         <activity
             android:name=".Activities.Buttons"

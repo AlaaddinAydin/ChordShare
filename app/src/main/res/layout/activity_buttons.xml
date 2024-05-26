@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/layout_education"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:orientation="vertical"
         android:padding="10dp"
         android:gravity="center"
@@ -43,7 +43,7 @@
     <LinearLayout
         android:id="@+id/layout_chord_database"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:orientation="vertical"
         android:padding="10dp"
         android:background="@color/buttonBlack"
@@ -76,7 +76,7 @@
     <LinearLayout
         android:id="@+id/layout_metronome"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:orientation="vertical"
         android:background="@color/buttonBlack"
         android:padding="10dp"
@@ -109,7 +109,7 @@
     <LinearLayout
         android:id="@+id/layout_tuner"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:orientation="vertical"
         android:padding="10dp"
         android:gravity="center"
