@@ -41,15 +41,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnBack">
 
-                <Button
+                <android.widget.Button
                     android:id="@+id/btnMinusFrequency"
                     android:layout_width="450px"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="#1C1C1C"
                     android:text="@string/minus"
-                    android:textColor="@color/white"
-                    style="@style/OwnButtonTheme"/>
+                    style="@style/OwnUntransparentButtonTheme"/>
 
                 <TextView
                     android:id="@+id/txtFrequencySet"
@@ -60,15 +58,13 @@
                     android:textAlignment="center"
                     android:textColor="@color/white" />
 
-                <Button
+                <android.widget.Button
                     android:id="@+id/btnPlusFrequency"
                     android:layout_width="450px"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="#1C1C1C"
                     android:text="@string/plus"
-                    android:textColor="@color/white"
-                    style="@style/OwnButtonTheme"/>
+                    style="@style/OwnUntransparentButtonTheme"/>
             </LinearLayout>
 
             <LinearLayout
@@ -83,15 +79,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/layoutFrequency">
 
-                <Button
+                <android.widget.Button
                     android:id="@+id/btnMinusDuration"
                     android:layout_width="450px"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="#1C1C1C"
                     android:text="@string/minus"
-                    android:textColor="@color/white"
-                    style="@style/OwnButtonTheme"/>
+                    style="@style/OwnUntransparentButtonTheme"/>
 
                 <TextView
                     android:id="@+id/txtDuration"
@@ -102,15 +96,13 @@
                     android:textAlignment="center"
                     android:textColor="@color/white" />
 
-                <Button
+                <android.widget.Button
                     android:id="@+id/btnPlusDuration"
                     android:layout_width="450px"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="#1C1C1C"
                     android:text="@string/plus"
-                    android:textColor="@color/white"
-                    style="@style/OwnButtonTheme"/>
+                    style="@style/OwnUntransparentButtonTheme"/>
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

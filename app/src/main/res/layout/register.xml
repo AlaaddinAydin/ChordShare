@@ -59,7 +59,7 @@
                 android:inputType="text|textPassword"
                 style="@style/OwnTextTheme"/>
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/btnRDate"
                 style="@style/OwnButtonTheme"
                 android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                 android:layout_marginTop="65dp"
                 android:text="GG.AA.YYYY" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/btnRRegister"
                 style="@style/OwnButtonTheme"
                 android:layout_width="match_parent"

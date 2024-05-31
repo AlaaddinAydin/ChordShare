@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none"
+    android:background="@color/BackgroundApp"
     tools:context=".Activities.Detail">
 
     <RelativeLayout
@@ -157,8 +158,8 @@
 
             </LinearLayout>
 
-            <Button
-                style="@style/OwnButtonTheme"
+            <android.widget.Button
+                style="@style/OwnUntransparentButtonTheme"
                 android:id="@+id/delete_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

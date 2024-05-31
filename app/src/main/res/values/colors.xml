@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="buttonBlack">#8B504F4F</color>
+    <color name="buttonBlack">#504F4F</color>
     <color name="buttonText">#ECECECEC</color>
 
     <color name="txtBackgroundText">#ECECECEC</color>
@@ -13,7 +13,7 @@
 
     <color name="BackgroundApp">#212626</color>
 
-    <color name="light_gray">#D3D3D3</color> <!-- Açık gri kenarlık rengi -->
+    <color name="light_gray">#ABD3D3D3</color> <!-- Açık gri kenarlık rengi -->
 
 
 

@@ -8,10 +8,14 @@
 
 
     <style name="OwnButtonTheme" parent="Base.Theme.ChordShare">
-
-        <item name="android:backgroundTint">@color/buttonBlack</item>
+        <item name="android:background">@drawable/custom_button</item>
         <item name="android:textColor">@color/buttonText</item>
+        <item name="android:textAppearance">?attr/textAppearanceButton</item>
+    </style>
 
+    <style name="OwnUntransparentButtonTheme" parent="Base.Theme.ChordShare">
+        <item name="android:background">@drawable/custom_button_untransparent</item>
+        <item name="android:textColor">@color/buttonText</item>
     </style>
 
     <style name="OwnTextTheme" parent="Base.Theme.ChordShare">

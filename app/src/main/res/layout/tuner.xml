@@ -19,7 +19,8 @@
         </TextView>
     </TableRow>
 
-    <TableRow android:layout_width="fill_parent" >
+    <TableRow android:layout_width="fill_parent"
+        android:visibility="invisible">
 
         <Button
             android:id="@+id/e_button"
@@ -37,7 +38,8 @@
         </Button>
     </TableRow>
 
-    <TableRow android:layout_width="fill_parent" >
+    <TableRow android:layout_width="fill_parent"
+        android:visibility="invisible">
 
         <Button
             android:id="@+id/g_button"

@@ -48,15 +48,14 @@
                 android:hint="Şifre"
                 android:inputType="text|textPassword" />
 
-            <Button
-                style="@style/OwnButtonTheme"
+            <android.widget.Button
                 android:id="@+id/btnLLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtLPassword"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="82dp"
-                android:text="Giriş Yap" />
+                android:text="Giriş Yap"
+                style="@style/OwnButtonTheme"
+                 />
 
         </LinearLayout>
 
