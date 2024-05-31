@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ChordShare" parent="Theme.AppCompat.DayNight">
+        <!-- Customize your light theme here. -->
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+
+
+    <style name="OwnButtonTheme" parent="Base.Theme.ChordShare">
+
+        <item name="android:backgroundTint">@color/buttonBlack</item>
+        <item name="android:textColor">@color/buttonText</item>
+
+    </style>
+
+    <style name="OwnTextTheme" parent="Base.Theme.ChordShare">
+        <item name="android:background">@drawable/custom_input</item>
+        <item name="android:textColor">@color/txtText</item>
+        <item name="android:textColorHint">@color/txtText</item>
+        <item name="android:ems">15</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingStart">10dp</item>
+
+    </style>
+
+    <style name="Theme.ChordShare" parent="Base.Theme.ChordShare" />
+</resources>

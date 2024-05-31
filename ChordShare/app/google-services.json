@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "470671632499",
+    "firebase_url": "https://chordshare-effbd-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "chordshare-effbd",
+    "storage_bucket": "chordshare-effbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470671632499:android:03f521e0fb428acc2ba206",
+        "android_client_info": {
+          "package_name": "com.example.chordshare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxxG41XGeDSE9AOXgjW5kT3t_aP7vozXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

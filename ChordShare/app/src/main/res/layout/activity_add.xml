@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activities.AddActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/add_activity_imageViewMusicImage"
+                android:layout_width="240dp"
+                android:layout_height="300dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_image_search"
+                android:background="@color/design_default_color_background"
+                android:onClick="selectMainImage"
+                android:contentDescription="Main Music Image">
+            </ImageView>
+
+            <EditText
+                android:id="@+id/add_activity_editTextMusicName"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                style="@style/OwnTextTheme"
+                android:hint="Parçanın ismini giriniz"
+                android:textAlignment="center">
+            </EditText>
+
+            <EditText
+                android:id="@+id/add_activity_editTextMusicGroup"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:hint="Grubu giriniz"
+                style="@style/OwnTextTheme"
+                android:textAlignment="center">
+            </EditText>
+
+            <EditText
+                android:id="@+id/add_activity_editTextMusicLyrics"
+                android:layout_width="350dp"
+                android:inputType="textMultiLine"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                style="@style/OwnTextTheme"
+                android:hint="Şarkı sözlerini giriniz"
+                android:textAlignment="center">
+            </EditText>
+
+
+            <EditText
+                android:id="@+id/add_activity_editTextMusicLink"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                style="@style/OwnTextTheme"
+                android:hint="Parçanın linkini giriniz."
+                android:textAlignment="center">
+            </EditText>
+
+            <ImageView
+                android:id="@+id/add_activity_imageViewMusicChord"
+                android:layout_width="240dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_image_search"
+                android:background="@color/design_default_color_background"
+                android:onClick="selectChordImage"
+                android:contentDescription="Music Chord Image">
+            </ImageView>
+
+            <Button
+                style="@style/OwnButtonTheme"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:text="Kaydet"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:id="@+id/add_activity_btnSave"
+                android:enabled="true"
+                android:textAllCaps="false"
+                android:onClick="MusicSave">
+            </Button>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundApp"
+    android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+    tools:context=".Activities.Register">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+
+            <EditText
+                android:id="@+id/txtRUsername"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                style="@style/OwnTextTheme"
+                android:layout_marginTop="74dp"
+                android:layout_toEndOf="@+id/textView3"
+                android:hint="Kullanıcı Adı"
+                android:inputType="text"
+                />
+
+
+            <EditText
+                android:id="@+id/txtRPassword"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="46dp"
+                android:layout_toEndOf="@+id/textView4"
+                android:hint="Şifre"
+                android:inputType="text|textPassword"
+                style="@style/OwnTextTheme"/>
+
+
+
+            <EditText
+                android:id="@+id/txtRPassRep"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:hint="Şifre Doğrulama"
+                android:layout_marginTop="46dp"
+                android:layout_toEndOf="@+id/textView5"
+                android:inputType="text|textPassword"
+                style="@style/OwnTextTheme"/>
+
+            <Button
+                android:id="@+id/btnRDate"
+                style="@style/OwnButtonTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtRPassRep"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="65dp"
+                android:text="GG.AA.YYYY" />
+
+            <Button
+                android:id="@+id/btnRRegister"
+                style="@style/OwnButtonTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnRDate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="54dp"
+                android:text="Kayıt Ol" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

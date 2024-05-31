@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ChordShare</string>
+
+    <string name="settings">Settings</string>
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="back">Back</string>
+    <string name="make_sound">Make Sound</string>
+    <string name="shared_pref_name">com.hackermb.smartwatchmetronome</string>
+    <string name="shared_pref_frequency">frequency</string>
+    <string name="shared_pref_duration">duration</string>
+    <string name="bpm">%1$d BPM</string>
+    <string name="duration">%1$d MS</string>
+</resources>

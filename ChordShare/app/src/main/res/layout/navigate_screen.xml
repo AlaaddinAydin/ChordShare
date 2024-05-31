@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chordshare_logo_splash"
+    android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+    tools:context=".Activities.NavigateScreen">
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/OwnButtonTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="92dp"
+        android:text="Giris"
+        app:rippleColor="#222828" />
+
+    <Button
+        android:id="@+id/btnRegister"
+
+        style="@style/OwnButtonTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="92dp"
+        android:layout_toEndOf="@+id/btnLogin"
+        android:text="Kayıt Ol" />
+</RelativeLayout>

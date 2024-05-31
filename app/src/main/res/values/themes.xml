@@ -15,13 +15,28 @@
     </style>
 
     <style name="OwnTextTheme" parent="Base.Theme.ChordShare">
+        <!-- Hafif şeffaf beyaz arka plan -->
         <item name="android:background">@drawable/custom_input</item>
-        <item name="android:textColor">@color/txtText</item>
-        <item name="android:textColorHint">@color/txtText</item>
+
+        <!-- Beyaz metin rengi -->
+        <item name="android:textColor">@color/white</item>
+
+        <!-- Beyaz ipucu metni rengi -->
+        <item name="android:textColorHint">@color/white</item>
+
+        <!-- Metin alanı genişliği -->
         <item name="android:ems">15</item>
+
+
+        <!-- Metin boyutu -->
         <item name="android:textSize">14sp</item>
+
+        <!-- Sol padding -->
         <item name="android:paddingStart">10dp</item>
 
+        <!-- Kenarlık ve gölge ekleme -->
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:elevation">2dp</item>
     </style>
 
     <style name="Theme.ChordShare" parent="Base.Theme.ChordShare" />

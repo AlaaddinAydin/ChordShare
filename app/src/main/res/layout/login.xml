@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+    android:background="@drawable/loginbackground"
     tools:context=".Activities.Login">
 
 
@@ -19,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_marginTop="250dp"
             android:layout_centerInParent="true"
             android:gravity="center">
 
@@ -30,23 +32,20 @@
                 android:layout_height="35dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="94dp"
                 android:hint="Kullanıcı Adı"
                 android:layout_toEndOf="@+id/textView"
                 android:inputType="text" />
 
 
-
             <EditText
                 android:id="@+id/txtLPassword"
+                style="@style/OwnTextTheme"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                style="@style/OwnTextTheme"
                 android:layout_below="@+id/txtLUsername"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="76dp"
-                android:hint="Şifre"
                 android:layout_toEndOf="@+id/textView2"
+                android:hint="Şifre"
                 android:inputType="text|textPassword" />
 
             <Button
