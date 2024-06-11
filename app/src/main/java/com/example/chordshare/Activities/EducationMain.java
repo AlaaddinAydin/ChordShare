@@ -12,44 +12,52 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.chordshare.Music;
+import com.example.chordshare.Adapters.EducationAdapter;
 import com.example.chordshare.Adapters.MusicAdapter;
+import com.example.chordshare.Education;
+import com.example.chordshare.EducationDetail;
+import com.example.chordshare.EducationDetailView;
+import com.example.chordshare.Music;
 import com.example.chordshare.MusicDetail;
 import com.example.chordshare.R;
 
-public class Home extends AppCompatActivity {
+
+
+public class EducationMain extends AppCompatActivity {
+
 
     private RecyclerView mRecyclerView;
-    private MusicAdapter adapter;
+    private EducationAdapter adapter;
 
-    static public MusicDetail musicDetail;
+    static public EducationDetail educationDetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.activity_education);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.home_avtivity_recyclerView);
-        adapter = new MusicAdapter(Music.getData(this), this);
+        mRecyclerView = (RecyclerView) findViewById(R.id.education_activity_recyclerView);
+        adapter = new EducationAdapter(Education.getData(this), this);
 
         mRecyclerView.setHasFixedSize(true);
 
         GridLayoutManager manager = new GridLayoutManager(this,1);
         mRecyclerView.setLayoutManager(manager);
-        mRecyclerView.addItemDecoration(new GridManagerDecoration());
+        mRecyclerView.addItemDecoration(new  EducationMain.GridManagerDecoration());
         mRecyclerView.setAdapter(adapter);
 
-        adapter.setOnItemClickListener(new MusicAdapter.OnItemClickListener() {
+        adapter.setOnItemClickListener(new EducationAdapter.OnItemClickListener() {
             @Override
-            public void onItemClick(Music music, int position) {
-                musicDetail = new MusicDetail(music.getMusicName(), music.getMusicGroup(), music.getMusicLyrics(), music.getMusicLink(), music.getMusicImage(), music.getMusicChord());
+            public void onItemClick(Education education, int position) {
+                educationDetail = new EducationDetail(education.getEducationName(), education.getEducationDescription(), education.getEducationLink());
 
-                Intent detailIntent = new Intent(Home.this, Detail.class);
+                Intent detailIntent = new Intent(EducationMain.this, EducationDetailView.class);
                 detailIntent.putExtra("position", position);
-                detailIntent.putExtra("musicLink", music.getMusicLink());
+                detailIntent.putExtra("educationLink", education.getEducationLink());
                 startActivity(detailIntent);
             }
         });
+
     }
 
     private class GridManagerDecoration extends RecyclerView.ItemDecoration{
@@ -59,31 +67,20 @@ public class Home extends AppCompatActivity {
         }
     }
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.add_menu, menu);
+        getMenuInflater().inflate(R.menu.education_menu, menu);
         return true;
     }
 
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.add_menu_add_book) {
+        if (item.getItemId() == R.id.education_menu_add_education) {
             // Intent geçiş
-            Intent addMusicIntent = new Intent(this, AddActivity.class);
+            Intent addEducationIntent = new Intent(this, AddEducation.class);
             finish();
-            startActivity(addMusicIntent);
+            startActivity(addEducationIntent);
             return true;
-        }
-
-
-        if (item.getItemId() == R.id.tunner)
-        {
-            Intent aboutUsIntent = new Intent(this, Tuner.class);
-            startActivity(aboutUsIntent);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -93,4 +90,5 @@ public class Home extends AppCompatActivity {
         super.onResume();
         adapter.notifyDataSetChanged();
     }
+
 }

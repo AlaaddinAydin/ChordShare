@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".Activities.AddActivity">
+    tools:context=".Activities.AddEducation">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,51 +18,30 @@
             android:layout_centerInParent="true"
             android:gravity="center">
 
-            <ImageView
-                android:id="@+id/add_activity_imageViewMusicImage"
-                android:layout_width="240dp"
-                android:layout_height="300dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_image_search"
-                android:background="@color/design_default_color_background"
-                android:onClick="selectMainImage"
-                android:contentDescription="Main Music Image">
-            </ImageView>
 
             <EditText
-                android:id="@+id/add_activity_editTextMusicName"
+                android:id="@+id/add_activity_education_editTextEducationName"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="50dp"
                 style="@style/OwnTextTheme"
-                android:hint="Parçanın ismini giriniz"
+                android:hint="Eğitim Adını Giriniz."
                 android:textAlignment="center">
             </EditText>
 
             <EditText
-                android:id="@+id/add_activity_editTextMusicGroup"
+                android:id="@+id/add_activity_education_editTextEducationDescription"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
-                android:hint="Grubu giriniz"
+                android:hint="Eğitim açıklamasını giriniz."
                 style="@style/OwnTextTheme"
-                android:textAlignment="center">
-            </EditText>
-
-            <EditText
-                android:id="@+id/add_activity_editTextMusicLyrics"
-                android:layout_width="350dp"
-                android:inputType="textMultiLine"
-                android:layout_height="100dp"
-                android:layout_marginTop="15dp"
-                style="@style/OwnTextTheme"
-                android:hint="Şarkı sözlerini giriniz"
                 android:textAlignment="center">
             </EditText>
 
 
             <EditText
-                android:id="@+id/add_activity_editTextMusicLink"
+                android:id="@+id/add_activity_editTextEducationLink"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
@@ -71,17 +50,6 @@
                 android:textAlignment="center">
             </EditText>
 
-            <ImageView
-                android:id="@+id/add_activity_imageViewMusicChord"
-                android:layout_width="240dp"
-                android:layout_height="300dp"
-                android:layout_marginTop="15dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_image_search"
-                android:background="@color/design_default_color_background"
-                android:onClick="selectChordImage"
-                android:contentDescription="Music Chord Image">
-            </ImageView>
 
             <android.widget.Button
                 style="@style/OwnUntransparentButtonTheme"
@@ -91,11 +59,10 @@
                 android:text="Kaydet"
                 android:textSize="19dp"
                 android:textStyle="bold"
-                android:id="@+id/add_activity_btnSave"
+                android:id="@+id/add_activity_Education_btnEducationSave"
                 android:enabled="true"
                 android:textAllCaps="false"
-                android:onClick="MusicSave"/>
-
+                android:onClick="EducationSave"/>
 
         </LinearLayout>
 

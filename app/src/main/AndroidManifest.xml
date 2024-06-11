@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,13 +20,19 @@
         android:theme="@style/Theme.ChordShare"
         tools:targetApi="31">
         <activity
+            android:name=".EducationDetailView"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AddEducation"
+            android:exported="false" />
+        <activity
             android:name=".Activities.Metronome"
             android:exported="false" />
         <activity
             android:name=".Activities.Settings"
             android:exported="false" />
         <activity
-            android:name=".Activities.Education"
+            android:name=".Activities.EducationMain"
             android:exported="false" />
         <activity
             android:name=".Activities.Buttons"
@@ -36,7 +41,7 @@
             android:name=".Activities.Tuner"
             android:exported="true" />
         <activity
-            android:name=".About"
+            android:name=".Activities.About"
             android:exported="false" />
         <activity
             android:name=".Activities.Detail"

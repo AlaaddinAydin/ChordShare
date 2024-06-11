@@ -2,15 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/add_menu_add_book"
+    <item android:id="@+id/education_menu_add_education"
         android:icon="@drawable/ic_add"
         app:showAsAction="always"
         android:title="Add Book"/>
-
-
-    <item
-        android:id="@+id/tunner"
-        android:icon="@drawable/ic_menu"
-        android:title="Akort cihazı"/>
-
 </menu>
