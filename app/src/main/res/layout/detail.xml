@@ -159,7 +159,7 @@
             </LinearLayout>
 
             <android.widget.Button
-                style="@style/OwnUntransparentButtonTheme"
+                android:background="@drawable/custom_button_untransparent_selector"
                 android:id="@+id/delete_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

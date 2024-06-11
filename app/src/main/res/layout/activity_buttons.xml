@@ -15,7 +15,7 @@
         android:gravity="center"
 
         android:layout_margin="1dp"
-        android:background="@color/buttonBlack"
+        android:background="@drawable/custom_button_untransparent_selector"
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.25"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_education" />
+            android:src="@drawable/ic_chorddatabase" />
 
         <TextView
             android:id="@+id/text_education"
@@ -46,7 +46,7 @@
         android:layout_height="150dp"
         android:orientation="vertical"
         android:padding="10dp"
-        android:background="@color/buttonBlack"
+        android:background="@drawable/custom_button_untransparent_selector"
         android:layout_margin="1dp"
         android:gravity="center"
         app:layout_constraintWidth_percent="0.25"
@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_chord_database" />
+            android:src="@drawable/ic_educationcolored" />
 
         <TextView
             android:id="@+id/text_chord_database"
@@ -78,7 +78,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:orientation="vertical"
-        android:background="@color/buttonBlack"
+        android:background="@drawable/custom_button_untransparent_selector"
         android:padding="10dp"
         android:gravity="center"
         android:layout_margin="1dp"
@@ -96,7 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_metronome" />
+            android:src="@drawable/ic_metronomecolored" />
 
         <TextView
             android:id="@+id/text_metronome"
@@ -107,6 +107,7 @@
     </LinearLayout>
 
     <LinearLayout
+
         android:id="@+id/layout_tuner"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -114,7 +115,7 @@
         android:padding="10dp"
         android:gravity="center"
         android:layout_margin="1dp"
-        android:background="@color/buttonBlack"
+        android:background="@drawable/custom_button_untransparent_selector"
 
         app:layout_constraintWidth_percent="0.25"
         app:layout_constraintHeight_percent="0.25"
@@ -130,7 +131,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_tuner" />
+            android:src="@drawable/ic_tunercolored" />
 
         <TextView
             android:id="@+id/text_tuner"

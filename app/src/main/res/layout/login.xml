@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="82dp"
                 android:text="Giriş Yap"
-                style="@style/OwnButtonTheme"
+                android:background="@drawable/custom_button_selector"
                  />
 
         </LinearLayout>

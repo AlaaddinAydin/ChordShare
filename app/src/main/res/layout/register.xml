@@ -61,7 +61,7 @@
 
             <android.widget.Button
                 android:id="@+id/btnRDate"
-                style="@style/OwnButtonTheme"
+                android:background="@drawable/custom_button_selector"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtRPassRep"
@@ -71,7 +71,7 @@
 
             <android.widget.Button
                 android:id="@+id/btnRRegister"
-                style="@style/OwnButtonTheme"
+                android:background="@drawable/custom_button_selector"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btnRDate"

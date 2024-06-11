@@ -52,7 +52,8 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
+                android:gravity="center"
                 android:layout_marginTop="7dp"
                 android:layout_height="wrap_content">
 
@@ -100,7 +101,7 @@
             </LinearLayout>
 
             <android.widget.Button
-                style="@style/OwnUntransparentButtonTheme"
+                android:background="@drawable/custom_button_untransparent_selector"
                 android:id="@+id/education_delete_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -25,7 +25,7 @@
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:id="@+id/map_fragment"
                 android:layout_width="300dp"
-                android:layout_height="450dp" />u
+                android:layout_height="450dp" />
 
 
             <LinearLayout

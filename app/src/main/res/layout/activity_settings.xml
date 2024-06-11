@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/minus"
-                    style="@style/OwnUntransparentButtonTheme"/>
+                    android:background="@drawable/custom_button_untransparent_selector"/>
 
                 <TextView
                     android:id="@+id/txtFrequencySet"
@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/plus"
-                    style="@style/OwnUntransparentButtonTheme"/>
+                    android:background="@drawable/custom_button_untransparent_selector"/>
             </LinearLayout>
 
             <LinearLayout
@@ -85,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/minus"
-                    style="@style/OwnUntransparentButtonTheme"/>
+                    android:background="@drawable/custom_button_untransparent_selector"/>
 
                 <TextView
                     android:id="@+id/txtDuration"
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/plus"
-                    style="@style/OwnUntransparentButtonTheme"/>
+                    android:background="@drawable/custom_button_untransparent_selector"/>
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
